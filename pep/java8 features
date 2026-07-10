@@ -1,0 +1,28 @@
+1. Lambda Expressions
+2. Functional Interface
+3. Predefined Interface: predicate, function, Consumer, Supplier
+4. Default & Static method
+5. Optional class
+6. Streams
+7. Date & Time Api
+
+
+
+Examples:
+
+ex2:
+-----------------------------
+public int squareit(int n){
+    return n*n;
+}
+n-> n * n
+------------------------------
+
+ex3:
+-----------------------------
+public int n1(String s){
+    return s.length();
+}
+s -> s.length();
+-----------------------------
+
