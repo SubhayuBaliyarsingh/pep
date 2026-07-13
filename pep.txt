@@ -708,3 +708,12 @@ public void m1(String s){
 return s1.length();
 }
 s->s.length();
+--------------------------------------------------------------------------
+
+Lambda Expression
+
+public void m1(int a, int b) {
+   System.out.println("Nagendra........waiting");
+}
+(int a, int b)-> System.out.println("The sum is: " + (a+b));
+
