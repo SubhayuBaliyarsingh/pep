@@ -713,7 +713,37 @@ s->s.length();
 Lambda Expression
 
 public void m1(int a, int b) {
-   System.out.println("Nagendra........waiting");
+   System.out.println("Person........waiting");
 }
 (int a, int b)-> System.out.println("The sum is: " + (a+b));
+
+--------------------------------------------------------------------------
+Functional Interface
+
+interface inter{
+   public void m1();
+}
+#FunctionalInterface
+interface B extends A{
+   public void m2();
+}
+ex=====================
+interface inter{
+   public void m1();
+}
+class Tushar implements interf{
+   public void m1(){
+      System.out.println("".......)
+   }
+}
+class Test{
+   public static void main (String args[]){
+      interf i = new Tushar();
+      i.t1();
+   }
+}
+
+
+
+
 
