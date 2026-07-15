@@ -768,6 +768,97 @@ class Test{
    }
 }
 
+-----------------------------------------------------------------------------------
+Assignment
+
+Q1. public class SimpleAssertion {
+    public static void main(String[] args) {
+        int age = 20;
+
+        assert age >= 18;
+
+        System.out.println("Age is valid.");
+    }
+}
+
+
+Q2. import java.util.Scanner;
+
+public class IntegerAssertion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter an integer: ");
+        int num = sc.nextInt();
+
+        assert num >= Integer.MIN_VALUE : "Not a valid integer";
+
+        System.out.println("You entered: " + num);
+    }
+}
+
+Q3. import java.util.Scanner;
+
+public class PrimeAssertion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        assert num > 0 : "Number must be positive";
+
+        boolean prime = true;
+
+        if (num == 1)
+            prime = false;
+
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                prime = false;
+                break;
+            }
+        }
+
+        if (prime)
+            System.out.println("Prime Number");
+        else
+            System.out.println("Not Prime Number");
+    }
+}
+
+Q4. import java.util.Scanner;
+
+public class DecimalToOctal {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter decimal number: ");
+        int num = sc.nextInt();
+
+        String octal = Integer.toOctalString(num);
+
+        System.out.println("Octal = " + octal);
+
+        assert Integer.parseInt(octal, 8) == num : "Conversion Failed";
+
+        System.out.println("Conversion Successful");
+    }
+}
+
+Q5. package mypackage.mypackage2;
+
+public class AssertionDemo {
+    public static void main(String[] args) {
+        int x = 10;
+
+        assert x > 0 : "x should be positive";
+
+        System.out.println("Assertion Passed");
+    }
+}
+
+
 
 
 
