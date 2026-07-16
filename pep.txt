@@ -858,6 +858,63 @@ public class AssertionDemo {
     }
 }
 
+----------------------------------------------------------------------------------------------------
+Spring Framework--- 1.Spring Core
+                    2. Spring MVC
+                    3. Spring Boot
+                    4. Spring AOP
+                    5. Spring Security
+                    6. Hibernate
+                    7. Exception Handling
+                    8. Unit Testing
+                    9. Database
+                    10. API Testing Tools like Postman or Swagger
+
+
+1. Dependency Injection: It is a fundamental concept in the Spring Framework that allows objects to receive their dependencies from an external source rather than creating them internally.
+
+Why Use Dependency Injection?
+
+Loose Coupling: Classes do not need to hardcode the creation of their dependencies.
+Easier Testing: You can easily swap real dependencies with mock objects during unit tests.
+Component Reusability: Objects are managed as singletons or prototypes automatically, making configurations highly reusable.
+
+The Three Main Types of Dependency Injection
+
+a. Constructor Injection: Dependencies are provided through a class constructor. This is the industry-standard approach because it ensures dependencies are immutable (final) and never null.
+      @Component                                                                
+public class Car {
+    private final Engine engine;
+
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+}
+
+*** @Autowired: @Autowired is a core annotation used for automatic dependency injection. It tells the Spring container to locate and inject collaborating beans into your class automatically, eliminating the need to instantiate objects manually using the new keyword.
+
+*** Beans: These are foundational Java objects that are instantiated, assembled, and managed by the Spring Inversion of Control (IoC) container.
+
+b. Setter Injection: Dependencies are provided through public setter methods. Use this type only for optional dependencies that can be changed or assigned defaults later.
+         @Component
+public class Car {
+    private Engine engine;
+
+    @Autowired
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+}
+
+c. Field Injection: Dependencies are injected directly into private fields using the @Autowired annotation. It looks clean but creates tight coupling with the container, makes unit testing difficult without reflection, and hides architectural flaws.
+         @Component
+public class Car {
+    @Autowired 
+    private Engine engine; 
+}
+
+
+2. Inversion of Control (IoC): It is a core architectural design principle in Spring where the control of object creation, configuration, and life cycle management is transferred from the application code to the Spring framework.
 
 
 
